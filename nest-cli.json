@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/project-kiki/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/project-kiki/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/project-kiki",
+  "projects": {
+    "project-kiki": {
+      "type": "application",
+      "root": "apps/project-kiki",
+      "entryFile": "main",
+      "sourceRoot": "apps/project-kiki/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/project-kiki/tsconfig.app.json"
+      }
+    },
+    "rateapp": {
+      "type": "application",
+      "root": "apps/rateapp",
+      "entryFile": "main",
+      "sourceRoot": "apps/rateapp/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/rateapp/tsconfig.app.json"
+      }
+    }
+  }
+}
